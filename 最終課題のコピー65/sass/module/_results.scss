@@ -1,0 +1,292 @@
+@use '../mixin/responsive' as *;
+
+/*=======================================
+ results
+ ========================================*/
+ 
+.results{
+margin-top: 13px;
+@include mq("md"){
+  margin-left: 2px;
+  padding-top: 20px;
+
+}
+
+@include mq("sm"){
+  margin-left: -75px;
+  width: 375px;
+  margin-bottom: -20px;
+}
+
+}
+.results__inner{
+
+  @include mq("md"){
+    margin-top: -67px;
+    display: inline-block;//動く
+
+  }
+  width: 1280px;
+  width: 100%;
+
+  margin-top: -113px;
+  margin-bottom: 42px;
+  margin-right: auto;
+  margin-left: 35px;
+  text-align:left;
+  position: relative;
+
+  &::after {//黒い背景
+    content: " ";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin-left: -12px;
+    margin-bottom: -10px;
+    
+    left: 50%;
+    width: 97%;
+    height: 688px;
+    background:#3E3E3E 0% 0% no-repeat padding-box;
+    z-index: -1;//okl
+  padding-bottom: -20px;
+
+  @include mq("md"){
+    height: 755px;
+    margin-top: -59px;
+    top: 60%;
+  }
+    }
+
+    @include mq("sm"){
+ 
+     margin-top: 485px;
+     padding-top: 17px;
+     margin-right: 69px;
+   
+     &::after {//黒い背景
+      content: " ";
+      position: absolute;
+      transform: translate(-50%, -50%);
+      
+      top: 124%;
+      padding-top: -25px;
+      width: 552px;
+      height: 532px;
+      background:#3E3E3E 0% 0% no-repeat padding-box;
+      z-index: -1;//okl
+      padding-bottom: -20px;
+    }
+
+}
+}
+
+.slider-items {
+  margin-top: 50px;
+  max-width: calc(50vw + 600px);
+  margin-left: 60px;
+
+  @include mq("md"){
+    margin-bottom: 10px;
+  }
+  
+@include mq("sm"){
+  margin-left: 60px;
+  width:354px;
+  height: 69px;
+ 
+}
+
+}
+
+.slide-item {
+  width: 400px;
+  margin-left: 40px;
+  display: block;
+
+  @include mq("md"){
+    margin-top: 30px;
+  }
+  
+  @include mq("sm"){
+    margin-left: 12px;
+    display: block;
+left: 16px;
+width: 274px;
+
+  }
+  
+}
+
+.slide-body {
+  background: #ffffff;
+
+@include mq("md"){
+  padding: 21px 18px;
+}
+
+  @include mq("sm"){
+    padding: 16px;
+width: 273px;
+height: 82px;
+padding: 10px;
+  }
+  
+}
+.slide-title {
+  color: #3e3e3e;
+  font-size: 20px;
+  font-weight: bold;
+
+  @include mq("md"){
+    font: normal normal bold 20px/24px YuGothic;
+letter-spacing: 0px;
+margin-top: -4px;
+  }
+  
+  @include mq("sm"){
+    font-size: 14px;
+
+  }
+  
+}
+.slide-text {
+
+  margin-top: 12px;
+  color: #3e3e3e;
+  
+  @include mq("md"){
+    line-height: (24 / 16);
+    
+    margin-top: 5px;  
+    font: normal normal medium 16px/24px YuGothic;
+letter-spacing: 0px;
+width: 368px;
+
+  }
+  
+  @include mq("sm"){
+    font-size: 12px;
+    margin-top: 5px;
+    
+  }
+  
+}
+
+//dots
+
+.slick-dots{
+  text-align: left;
+@include mq("sm"){
+  text-align: center;
+}
+
+  li{
+
+    display: inline-block;
+    
+    @include mq("md"){
+      margin:  22px 8px;
+    }
+
+    @include mq("sm"){
+      margin:  12px 8px;
+    }
+    
+    button{
+      position: relative;
+      text-indent: -9999px;
+      &:before{
+        content: ''●;
+        font-size: 20px;
+        text-indent: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    &.slick-active{
+      button:before{
+        content: '◯';
+        color: #fff;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        bottom: 90%;
+        top: -10px;
+        left: -4px;
+      
+      }
+    }
+  }
+}
+
+.slick-dots li button {//検証からもってきた！^^
+  position: relative;
+  border-radius: 50%;
+  width: 14px;
+  height: 15px;
+  color: #000;
+  background-color: #fff;
+}
+
+.results-title{
+
+  font: normal normal 600 36px/44px Montserrat;
+  color: #fff;
+
+  @include mq("md"){
+    text-align: left;
+
+    margin-left: 60px;
+    z-index: 999;
+    
+    padding-top: 17px;
+
+  }
+  
+  @include mq("sm"){
+    text-align: center;
+    top: 30px;
+font-size: 30px;
+font: normal normal 600 30px/37px Montserrat;
+letter-spacing: 0px;
+margin-top: 79px;
+padding-top: 30px;
+margin-left: 60px;
+z-index: 999;
+
+  }
+  
+}
+  .results-button{
+
+    @include mq("md"){
+      
+    margin-top: 16px;
+    font-size: 20px;
+    font: normal normal 600 20px/23px Montserrat;
+letter-spacing: 4px;
+
+  max-width: 289px;
+  padding: 15px 82px;//これで調整か？違うサイズにしたい max-widthも使った
+  white-space: nowrap
+ 
+    }
+    @include mq("sm"){
+margin-left: 12px;
+margin-top: 6px;
+
+padding: 18px 100px;
+
+    }
+
+  }
+  
+    .slick-track {
+      position: relative;
+      top: -18px;
+      left: 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }

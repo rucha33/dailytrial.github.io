@@ -1,0 +1,216 @@
+@use '../mixin/responsive' as *;
+
+.p-footer {
+
+	color:#B2B2B2;
+
+	@include mq(md){
+		background: #3E3E3E;
+	width: 100%;
+height: 292px;
+	
+	}
+@include mq(sm){
+	background: #3E3E3E;
+	padding-top: 20px;
+width: 100%;
+height: 398px;
+margin-bottom: 20px;
+
+}
+
+}
+
+.footer__inner{
+
+	@include mq(md){
+		height: 292px;
+		display: flex;
+		align-items: center;
+		padding: 0px 160px;
+
+  }
+
+	@include mq(sm){
+		height: 395px;
+margin-top: -20px;
+		align-items: center;
+	
+  }
+
+}
+
+.footer__left {
+
+	@include mq(md){
+			width: 50%;//パーセント！
+  }
+
+}
+
+.footer__right {
+	width: 50%;
+	text-align: right;
+	@include mq("md"){
+
+		padding-bottom: 107px;
+	}
+	
+}
+
+.footer__logo {
+ color: #FAFAFA;
+ white-space: nowrap;
+font: normal normal bold 40px/77px Montserrat;
+letter-spacing: 1px;
+text-align: right;
+
+@include mq("sm"){
+	font-size: 30px;
+	margin-left: 80px;
+}
+	a {
+    color: #FAFAFA;
+    
+	}
+
+	p {
+    text-align: right;
+    
+	}
+
+}
+
+.footer__info {//
+	
+	color: #B2B2B2;
+
+  text-align: left;
+	
+	@include mq("md"){
+		font-size: 16px;
+	
+	}
+	
+	@include mq(sm){
+		text-align: center;
+
+		}
+		
+	p {
+		@include mq("md"){
+			padding-bottom: 15px;
+		}
+		
+		&:first-child {
+			margin-top: 35px;//できてる！
+
+		}
+	}
+}
+
+.footer_sns {
+
+	ul {
+		
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		@include mq("md"){
+			margin-top: 20px;//すごい！
+		}
+		
+		@include mq("sm"){
+			margin-left: 35%;
+			margin-top: 20%;
+		}
+		
+		li {
+			margin-right: 16px;
+
+			@include mq("sm"){
+			
+			}
+			
+			}
+
+			a {
+				text-decoration: none;
+				transition: all 0.3s ease 0s;
+
+			}
+
+		}
+	}
+
+.footer-snsLink{
+	width: 30px;
+
+}
+
+.footer_sns ul a {
+
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+.fab{
+	color: #B2B2B2;
+display: inline-block;
+width: 49px;
+
+}
+.small-text{
+	white-space: nowrap;
+top: 7142px;
+left: 913px;
+
+height: 15px;
+
+font: normal normal normal 12px/15px Montserrat;
+letter-spacing: 0.3px;
+color: #B2B2B2;
+opacity: 0.6;
+
+@include mq("sm"){
+	margin-left: 85px;
+}
+
+}
+
+  .fa-2x{
+    font-size: 36px;//指定すればいい
+}
+
+.size{
+	font-size: 42px;//指定すればいい
+	
+}
+
+//to-top
+
+.totop {
+	position: fixed;
+	
+	right: 40px;
+	bottom: 40px;
+	z-index: 100;
+	visibility: visible;
+	transition: all 0.3s ease 0s;
+
+	&.is-show {
+		visibility: visible;
+	}
+
+	a {
+
+		text-decoration: none;
+		transition: all 0.3s ease 0s;
+	}
+
+	img{
+		width: 51px;
+height: 51px;
+	}
+}

@@ -1,0 +1,14 @@
+@use "base/reset";
+@use "base/base";
+@use 'mixin/mixin';
+@use 'module/header';
+@use 'module/mainvisual';
+@use 'module/news';
+@use 'module/service';
+@use 'module/results';
+@use 'module/price';
+@use 'module/comments';
+@use 'module/faq';
+@use 'module/access';
+@use 'module/contact';
+@use 'module/footer';

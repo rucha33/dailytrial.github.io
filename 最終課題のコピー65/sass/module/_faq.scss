@@ -1,0 +1,221 @@
+@use '../mixin/responsive' as *;
+
+// -----
+// Q & A
+// -----
+
+.qa{
+	
+	position: relative;
+	
+	@include mq("md"){
+		
+	}
+	
+	@include mq("sm"){
+		width: 375px;
+
+	}
+	
+}
+
+.qa__inner{
+	background-image: url(/img/qa-bg.png);//innerにいれる
+	background-size: cover;
+
+	@include mq("md"){
+		max-width: 100%;
+		width: 1280px;
+		height: 952px;
+		margin-top: 20px;
+		background-position: 0 0;
+		z-index: -1;
+		margin-top: 250px;
+
+		margin-bottom: -94px;
+		
+	}
+	
+	@include mq("sm"){
+		margin-top: -106px;
+		margin-left: -15px;
+		background-position: top;
+		height: 816px;
+	}
+	
+}
+
+.qa__items{
+	
+	@include mq("md"){
+	 position: absolute;
+ }
+    list-style: none;
+  
+    margin:0 auto;
+    top: 142px;
+    left: 628px;
+    width: 612px;
+    height: 144px;
+
+		@include mq("sm"){
+			
+			width: 343px;
+			height: 150px;
+			margin-top: -6px;
+		
+		}
+		
+}
+
+.qa__item{
+	margin-top: 19px;
+padding-bottom: 10px;
+margin-bottom:-1px;
+
+ }
+
+.qa-box{
+	
+	@include mq("md"){
+		
+	}
+	
+}
+.qa-box__q{
+	border-radius: 4px 4px 0 0;
+	color: #4A4A4A;
+	background: #fff;
+	padding: 16px 56px;//可変にしたい...
+	font-weight: 700;
+text-align:left;
+	position: relative;//Qのボックスを起点にしやって
+	
+	@include mq("md"){
+		width: 612px;
+//heightいらなかった^^
+	}
+	
+	@include mq("sm"){
+		width: 343px;
+	
+	} 
+
+	&::before {
+		position: absolute;
+    content: "Q";
+    font-weight: 700;
+    background: hsl(226deg 100% 62%);
+    color: hsl(0deg 0% 100%);
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+    left: 17px;
+    top:15px;
+    text-align: center;
+    line-height: 24px;
+  
+}
+}
+
+.qa-box__icon{
+	width: 14px;
+	height: 14px;
+	position: absolute;//アイコンを起点として位置を決めていく
+	right: 14px;
+	top: 50%;
+	transform: translateY(-50%);//アイコンのエリアが作られました！
+	&.is-open{
+		.qa-box__bar2{
+			transform: rotate(90deg);//dnで消しちゃうのではなく
+		}
+
+	}
+}
+
+.qa-box__bar1{
+	width: 14px;
+	height: 2px;
+	background: #4269FF;
+	border-radius: 20px;
+	position: absolute;//アイコンに対して上下中央にそろって欲しいので↓
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	
+}
+
+.qa-box__bar2{
+	width: 2px;
+	height: 14px;//１の逆
+	background: #4269FF;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 0;
+	transition: all 0.3s ease 0s;//ゆっくり
+}
+
+.qa-box__a{
+	border-radius:0 0 4px 4px;
+	background: #fff;
+	color: #B2B8CF;
+	font-weight: 700;
+	line-height:(24 / 16);
+	padding: 2px 2px 2px 2px ;
+	display: none;//最初は見えてないから
+	text-align: left;
+
+	position: relative;
+
+	&::after{
+		position: absolute;
+		background: hsl(226deg 100% 62% / 20%);
+		margin: 0 3% 3% 3%;
+		padding: 3%;
+		
+		@include mq("sm"){
+			margin: 0 5% 10% 5%;
+		padding: 5%;
+		width: 311px;
+height: 78px;
+			
+		}
+}
+
+}
+
+.qa-box__content{
+	@include mq("md"){
+		background: hsl(226deg 100% 62% / 20%);
+		margin: 0 3% 3% 3%;
+		padding: 10px 7px;
+		font: normal normal medium 16px/24px YuGothic;
+	letter-spacing: 0px;
+	color: #8B909F;
+	}
+	@include mq("sm"){
+		width: 317px;
+height: 77px;
+		background: hsl(226deg 100% 62% / 20%);
+		margin: 0 3% 3% 3%;
+		padding: 12px 11px;
+font-size: 14px;
+		font: normal normal medium 16px/24px YuGothic;
+	letter-spacing: 0px;
+	color: #8B909F;
+	text-align: left;
+font: normal normal medium 14px/20px YuGothic;
+letter-spacing: 0px;
+	}
+	
+}
+
+.faq-title{
+	@include mq("md"){
+	
+	}
+	@include mq("sm"){
+	}
+	
+}

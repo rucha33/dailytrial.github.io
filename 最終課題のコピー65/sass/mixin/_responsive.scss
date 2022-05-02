@@ -1,0 +1,35 @@
+
+// ブレークポイント
+
+$breakpoints: (
+  'sm': 'screen and (max-width: 767px)',
+  'md': 'screen and (min-width: 768px)',
+) !default;
+
+// メディアクエリー
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// responsive image
+@mixin responsive_image {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+//
+
+@include mq(sm){
+  .is-pc{
+    display: none;
+  }
+}
+
+@include mq(md){
+  .is-sp{
+    display: none;
+  }
+}

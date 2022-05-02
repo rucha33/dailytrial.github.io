@@ -1,0 +1,261 @@
+@use '../mixin/responsive' as *;
+
+.service{
+
+&__inner{//手前のやつ レイアウト意識　どこレイアウト
+
+    @include mq(md){
+    
+    width: 1280px;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    top: 100px;
+    margin-top: -100px;
+    position: relative;//ok
+    margin-bottom: 400px;
+
+        &::before {//黒い背景
+        content: " ";
+        position: absolute;
+        transform: translate(-50%, -50%);//ここらへん
+        bottom: 50%;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 400px;
+        background:#3E3E3E 0% 0% no-repeat padding-box;
+        z-index: -1;//ok
+
+        }
+    }
+
+    @include mq(sm){
+    
+        width: 1280px;
+        width: 100%;
+        height: 400px;
+        margin: 0 auto;
+        top: 110px;
+      margin-top: -46px;
+        position: relative;//ok
+        margin-bottom: 400px;
+    
+            &::before {//黒い背景
+            content: " ";
+            position: absolute;
+            transform: translate(-50%, -50%);//ここらへん
+            bottom: 50%;
+            top: 58%;
+            left: 50%;
+            width: 100%;
+            height: 477px;
+            background:#3E3E3E 0% 0% no-repeat padding-box;
+            z-index: -1;//ok
+    
+            }
+        }
+}//閉じていい
+
+&__list{//文字部分とわけてみた
+ 
+    line-height: 1.8;
+    color: #000;
+    background: #fff;
+    box-shadow: 0px 5px 12px #3E3E3E33;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(md){
+        position: absolute;    
+
+        left: 50%;
+        transform: translateY(-50%); 
+        transform: translateX(-50%); 
+        right: 0;
+        width: 960px;
+        height: 331px;
+        
+        padding: 40px;
+
+        display: flex;//うれしい
+        margin:auto;
+        font-size: 20px;
+    }
+  
+    @include mq(sm){
+        padding-top: 51px;
+        top: 1358px;
+        left: 16px;
+        width: 343px;
+        height: 694px;
+        padding-left: 22px;
+        margin-right: 20px;
+       }
+  
+}
+}
+
+.service__content{
+
+    @include mq("md"){
+        width: 245px;
+        height: 133px;
+    }
+    
+    @include mq("sm"){
+        margin-right: 10px;
+        margin-top: -7px;
+    }
+    
+}
+
+.service__content1{
+    @include mq("md"){
+        width: 245px;
+        height: 170px;
+    }
+    
+    @include mq("sm"){
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+
+}
+    
+.service__item-picture{
+
+    @include mq("md"){
+        height: 31px;
+        text-align: center;
+        display: inline-block;
+        margin-right: -34px;
+        margin-bottom: 8px;
+    }
+
+    @include mq("sm"){
+        height: 43px;
+        text-align: center;
+        display: inline-block;
+        margin-right: -34px;
+        margin-bottom: 27px;
+        padding-top: 10px;
+    }
+    
+}
+
+.service__item-picture1{
+    @include mq("md"){
+        height:47px;
+text-align: center;
+display: inline-block;
+margin-right: -45px;
+margin-bottom: 21px;
+
+    }
+    @include mq("sm"){
+        height:47px;
+text-align: center;
+display: inline-block;
+margin-right: -31px;
+margin-bottom: -16px;
+margin-top: -2px;
+    }
+    
+}
+
+.service__content-title{
+    text-align: center;
+    display: inline-block;
+    
+    @include mq("md"){
+        margin-right: -4px;
+        margin-top: 8px;
+        line-height: 1.4em;
+        font: normal normal 600 20px/28px Montserrat;
+        letter-spacing: 4px;
+      
+        height: 52px;
+        font-size: 20px;
+    }
+    @include mq("sm"){
+    
+        height: 48px;
+        font: normal normal 600 20px/24px Montserrat;
+        letter-spacing: 4px;
+        color: #3E3E3E;
+        font-size: 20px;
+        
+    }
+    
+}
+
+.service__content-text{
+    display: inline-block;
+    
+    @include mq("md"){
+        top: 1915px;
+        left: 205px;
+        width: 230px;
+        height: 67px;
+        font-size: 14px;
+        margin-top: 10px;
+        text-align:left;
+
+    }
+
+    @include mq("sm"){
+        width: 311px;
+        height: 38px;
+        text-align: left;
+        font: normal normal medium 14px/24px YuGothic;
+        letter-spacing: 0px;
+        color: #3E3E3E;
+        font-size: 14px;
+        margin-top: 10px;
+margin-left: -5px;
+
+    }
+    
+}
+
+.service-title{
+    color: #fff;
+
+    @include mq("sm"){
+        text-align: center;
+        margin-right: 40px;
+    }
+    
+}
+
+.service__item{
+    
+    @include mq("md"){
+        align-items: center;
+        margin-right: 40px;
+        margin-left: 39px;
+        font: normal normal medium 14px/24px YuGothic;
+    }
+    
+    @include mq("sm"){
+
+        margin-bottom: 37px;
+        margin-right: 10px;
+    }
+    
+}
+
+.service__item-thumbnail{
+    margin-right: 41px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.service1{
+    width: 150px;
+    height: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
+}

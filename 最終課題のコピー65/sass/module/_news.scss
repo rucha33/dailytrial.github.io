@@ -1,0 +1,264 @@
+@use '../mixin/responsive' as *;
+
+/*
+* ニュース
+* -------------------------------------------------------------------
+*/
+
+.news__inner{
+	background: #fff;
+	box-shadow: 0px 5px 12px #3E3E3E33;
+	z-index: 999;
+	text-align: center;
+	@include mq(md){
+		
+		width: 1200px;
+		height: 659px;
+}
+
+@include mq("sm"){
+	top: 628px;
+left: 30px;
+width: 309px;
+height: 553px;
+align-items: center;
+margin-top: -42px;
+justify-content: center;
+
+padding-top: 10px;
+}
+}
+
+.news__items {
+
+	@include mq("md"){
+		
+		top: 970px;
+		left: 100px;
+		width: 1080px;
+		line-height: 28 / 18;
+		max-width: 100%;
+		margin: 60px auto 0;
+
+	}
+
+	@include mq("sm"){
+width: 510px;
+padding-right: 171px;
+margin-left: -14px;
+	}
+	}
+	
+	.news__item:first-child {
+		border-top: 1px solid #cecdcd;
+		max-width: 100%;
+	}
+	
+	.news__item{
+		border-bottom: 1px solid #CECDCD;
+		max-width: 100%;
+
+		@include mq("sm"){
+		
+		}
+		
+		&:hover{
+			background-color: #4973FF1A;
+	
+	}
+	}
+
+	.info {
+	
+		@include mq(md){
+			padding: 44px 118px 23px 0;
+			display: flex;
+			
+		}
+
+		@include mq("sm"){
+			padding: 16px 43px 4px 0px;
+
+		}
+	
+	}
+
+	.info__meta {
+		display: flex;
+			
+		@include mq(md){
+			width: (105px + 80px);
+			padding-top: 2px;
+		}
+
+		@include mq("sm"){
+			margin-bottom: 12px;
+		
+		}
+		
+	}
+	
+	.info__published {
+
+text-align: left;
+font: normal normal normal 18px/26px Montserrat;
+letter-spacing: 0.45px;
+color: #3E3E3E;
+
+		@include mq("md"){
+
+			width: 98px;
+			display: inline-block;
+			padding-top: 3px;
+			font-size: 18px;
+			margin-right: 40px;
+			white-space: nowrap;
+
+		}
+		
+		@include mq("sm"){
+			text-align:left;
+			font: normal normal normal 14px/20px Montserrat;
+			letter-spacing: 0.35px;
+			color: #3E3E3E;
+			margin-right: 24px;
+			margin-left: 10px;
+			
+		}
+		
+	}
+	
+	.info__label {//aとどっちにスタイル?
+
+		background: #FFFFFF 0% 0% no-repeat padding-box;
+		border: 2px solid #3B69FF;
+		border-radius: 50px;
+		text-align: center;
+		height: 30px;
+
+		@include mq("md"){
+			
+			font-size: 14px;
+			white-space: nowrap;
+			margin-right: 30px;
+			padding: 3px 32px;
+			
+			font: normal normal medium 14px/26px YuGothic;
+			letter-spacing: 0.35px;
+			color: #3E3E3E;
+		}
+		
+		@include mq("sm"){
+			width: 81px;
+			height: 20px;
+			font-size: 12px;
+			
+			font: normal normal medium 12px/24px YuGothic;
+			letter-spacing: 0.3px;
+			color: #3E3E3E;
+		}
+		
+		}
+	
+	.info__title {
+		display: inline-block;
+	
+align-items: center;
+		text-align: left;
+		position: relative;
+		
+		@include mq("md"){//a?
+
+		font: normal normal medium 18px/28px YuGothic;			
+		height: 51px;
+		
+			width: 754px;
+			padding: 1px 35px 20px;
+			margin-left: 80px;
+
+			letter-spacing: 0.45px;
+			color: #3E3E3E;
+			text-decoration: none;
+			//color: $color-text-base;
+			transition: all 0.3s ease 0s;
+		}
+			
+		@include mq("sm"){
+				width: 272px;
+margin-bottom: 1px;
+				font-size: 13px;
+				font: normal normal medium 14px/20px YuGothic;
+				letter-spacing: 0px;
+				color: #3E3E3E;
+				
+				}
+	}
+
+	.info__title::after{//あってる！！^^うれしい
+		border-right: solid 3px #3E3E3E;
+		border-top: solid 3px #3E3E3E;
+		content:"";
+		display: block;
+		height: 15px;
+		position: absolute;
+		transform: translateY(-50%) rotate(45deg);
+		width: 15px;
+		
+		@include mq("md"){
+			
+			right: -100px;
+			top: 50%;
+	}
+	@include mq("sm"){
+		right: -36px;
+			top: 18%;
+			margin-bottom: 10px;
+	
+	}
+	}
+	
+	.news-btn{
+
+		@include mq("md"){
+			margin-top: 30px;
+			font: normal normal 600 20px/23px Montserrat;
+			letter-spacing: 4px;
+			color: #3E3E3E;
+			max-width: 236px;
+padding: 20px 76px;//これで調整か？違うサイズにしたい max-widthも使った
+white-space: nowrap
+	
+		}
+		
+	@include mq("sm"){
+		margin-top: 40px;
+		width: 268px;
+		height: 55px;
+		font: normal normal 600 18px/23px Montserrat;
+
+	}
+	
+	}
+
+	.news-arrow{
+
+		@include mq("md"){
+			width: 13px;
+			height: 13px;
+			margin: 0 auto;
+		}
+		
+@include mq("sm"){
+
+	width: 11px;
+height: 22px;
+
+position: absolute;
+content:"";
+top: 50%;
+right: 10px;
+margin-top: -12px;
+
+}
+
+	}

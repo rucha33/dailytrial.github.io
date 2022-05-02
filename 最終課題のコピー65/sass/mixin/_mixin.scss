@@ -1,0 +1,92 @@
+@use '../mixin/responsive' as *;
+
+/*
+* 共通
+* -------------------------------------------------------------------
+*/
+
+.section-title{
+
+  color: #3E3E3E;
+  text-align: center;
+  font: normal normal 600 36px/44px Montserrat;
+  z-index:10000;
+  
+  @include mq("md"){
+   
+    margin-top: 120px;
+    margin-bottom: 60px;
+    padding-top: 60px;
+    font-size: 36px;
+
+  }
+  
+  @include mq("sm"){
+   
+    font-size: 30px;
+   padding: 30px;
+ 
+  }
+  
+}
+
+.btn{
+  display: inline-block;
+ 
+  height: 64px;
+  max-width: 100%;
+  
+  color: #000;
+  font-size: 1.125rem;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 120px;
+  letter-spacing: 4px;
+  
+  border: 1px solid #707070;
+  @include mq("md"){
+    padding: 20px 10px;
+
+  }
+  
+  @include mq("sm"){
+    padding: 16px 100px;
+  }
+  &:hover{
+  background-color: #000;
+  color: #fff;
+  transition: all .5s;
+  }
+  
+  &--black{
+    display: inline-block;
+
+    height: 64px;
+    max-width: 100%;
+    padding: 20px 10px;
+    font:bold;
+    
+  background-color: #3E3E3E;
+    color: #fff;
+    font-size: 1.125rem;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 120px;
+    letter-spacing: 4px;
+ 
+border: 1px solid #FFFFFF;
+
+    @include mq("sm"){
+      margin-top: 30px;
+    }
+    
+    &:hover{
+      
+      background-color: #fff;
+      color: #000;
+      
+      }
+
+  }
+
+}

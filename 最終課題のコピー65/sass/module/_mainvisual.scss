@@ -1,0 +1,135 @@
+@use '../mixin/responsive' as *;
+/*
+* メインビジュアル
+* -------------------------------------------------------------------
+*/
+
+.mainvisual {
+	height: 648px;
+	width: 1280px;
+z-index: -10;
+	background: transparent url(../img/mv.png) no-repeat top center / cover;
+	position: relative;
+	overflow: hidden;
+
+	@include mq(sm){
+		width: 375px;
+		height: 667px;
+		padding-top: 170%;
+		background: transparent url(../img/mv.png) no-repeat / cover;
+		background-position: 22.5%;
+		
+	}
+}
+
+.mainvisual__content {
+
+	@include mq(md){
+		width: 600px;
+		height: 191px;
+			position: absolute;
+	    content:"";
+			left: 50%;
+			top: 50%;
+			transform: translateY(-50%);
+				margin-right: auto;
+				margin-left: auto;
+				text-align:left;
+				
+	}
+			@include mq(sm){
+				top: 229px;
+				left: 16px;
+				width: 343px;
+				height: 224px;
+				margin-top: 67px;
+				position: absolute;
+				content:"";
+				top: 40%;
+
+				transform: translateY(-50%);
+		
+			}
+}
+
+.mainvisual__title{
+	font-size: 32px;
+	font: normal normal bold 32px/48px YuGothic;
+	text-align: left;
+	color: #3E3E3E;
+
+	@include mq(sm){
+		font-size: 24px;
+
+		width: 336px;
+		height: 64px;
+		font: normal normal bold 24px/40px YuGothic;
+		letter-spacing: 0px;
+		color: #3E3E3E;
+				
+	}
+}
+
+.mainvisual__lead{
+
+	padding-top: 27px;
+	font: normal normal bold 18px/28px YuGothic;
+	text-align: left;
+	letter-spacing: 0.45px;//必要！
+	
+	@include mq(sm){
+		padding-top: 32px;
+		text-align: left;
+		font: normal normal bold 14px/20px YuGothic;
+		letter-spacing: 0px;
+		color: #3E3E3E;
+		
+	}
+
+}
+
+.mainvisual__button{
+	background-color:#FFAA3B;
+	border-radius: 10px;
+	box-shadow: 0px 3px 5px #3E3E3E33;
+	display: inline-block;
+	margin-top: 40px;
+	padding: 11px 52px;
+	text-align: left;
+	
+	&:hover{
+background-color:#F18900;
+
+	}
+
+	@include mq("sm"){
+		width: 222px;
+		
+		white-space: nowrap;
+		padding: 12px;
+   margin-top: 30px;
+		text-align: center;
+		background: #FFAA3B 0% 0% no-repeat padding-box;
+		box-shadow: 0px 3px 5px #3E3E3E33;
+		border-radius: 10px;
+
+	}
+	
+}
+
+.button-link{
+	display: block;
+	color: #fff;
+	font: normal normal bold 18px/26px YuGothic;
+
+	@include mq("sm"){
+			display: block;
+		text-align: center;
+	
+font: normal normal bold 16px/24px YuGothic;
+letter-spacing: 0px;
+color: #FFFFFF;
+
+	}
+	
+}

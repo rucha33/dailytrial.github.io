@@ -1,0 +1,203 @@
+@use '../mixin/responsive' as *;
+
+.media{
+height: 500px;
+margin-bottom: 10px;
+}
+
+.media__img-cirle{
+  
+  @include mq("md"){
+    width: 100px;
+    height: 100px;
+    margin-top: 9px;
+
+  }
+  
+  @include mq("sm"){
+    width: 60px;
+height: 60px;
+margin-left: 7px;
+  }
+  
+}
+
+.media__inner{
+  margin: 0 auto;
+  align-items: center;
+  
+  position: relative;
+  flex-wrap: wrap;
+  
+  @include mq("md"){
+    display: flex;
+
+    margin-top: 160px;
+    margin-left: 40px;
+    width: 100%;
+    
+  }
+
+  @include mq("sm"){
+    margin-top: 100px;
+
+  }
+  
+  &::after {
+    content: " ";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    
+    width: 1280px;
+    background:#3E3E3E 0% 0% no-repeat;
+    z-index: -1;
+    
+    left: 20%;
+
+    @include mq("md"){
+      top: 1191px;
+      width: 1363px;
+      height: 2033px;
+    
+    }
+    
+    @include mq("sm"){
+      top: 162%;
+      height: 2000px;
+    
+    }
+    
+  }
+  
+}
+
+.media__body{
+
+  width: 666px;
+  height: 604px;
+  background: #fff;
+  box-shadow: 0px 5px 12px #3E3E3E33;
+
+  @include mq("md"){
+    
+  margin-bottom: 11px;
+  }
+
+@include mq("sm"){
+  width: 343px;
+height: 433px;
+margin-bottom: -229px;
+}
+}
+
+.media__text{
+ 
+  font-size: 16px;
+  top: 3689px;
+  left: 232px;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #3E3E3E;
+  
+  @include mq("md"){
+  margin: 0 15px 0 25px;
+  font: normal normal medium 16px/24px YuGothic;
+  width: 414px;
+  height: 88px;
+  margin-left: 31px;
+  margin-right: -10px;
+  margin-top: 8px;
+}
+
+@include mq("sm"){
+  margin: -6px 19px 11px;
+  width: 224px;
+  font: normal normal medium 14px/20px YuGothic;
+  font-size: 14px;
+  line-height: 20px;//やったー
+  padding-bottom: 10px;
+}
+
+}
+
+.media__comments__item{
+
+  display: flex;
+
+  @include mq("md"){
+   margin-top: 60px;
+
+  }
+
+  @include mq("sm"){
+    margin-top: 40px;
+  }
+  
+}
+
+.media__comments{
+
+  align-items: center;
+  
+  @include mq("md"){
+    margin: 60px;
+  }
+  
+  @include mq("sm"){
+    margin: 14px;
+  }
+  
+}
+
+.comments-title{
+  text-align:left;
+  text-align: left;
+  
+  letter-spacing: 0px;
+  color: #3E3E3E;
+
+  margin-bottom: 60px;
+  padding-top: 60px;
+
+  @include mq("md"){
+      font-size: 36px;
+      padding-top: 128px;
+    margin-left: 60px;
+    color: #3E3E3E;
+    text-align: left;
+    font: normal normal 600 36px/44px Montserrat;
+    z-index:10000;
+
+  }
+
+@include mq("sm"){
+  font-size: 30px;
+  margin: 40px 152px 20px 20px;
+  padding-top: 40px;
+}
+
+}
+
+.media___wrapper{
+  display: flex;
+  align-items: center;
+
+}
+
+.media__content{
+  flex: 1 1 50%;
+  width: 666px;
+  height: 604px;
+
+  @include mq("md"){
+margin-top: -20px;
+  }
+  
+}
+
+.media__img{
+flex: 0 0 50%;
+width: 534px;
+height: 444px;
+flex-wrap: wrap;
+}
